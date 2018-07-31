@@ -17,16 +17,10 @@ def find_the_cheese(array)
   cheese_types.each {|cheese| 
     if array.include?(cheese)
       return cheese
+    end
   }
 end
 
-def my_find(collection)
-  i = 0
-  while i < collection.length
-    return collection[i] if yield(collection[i])
-    i = i + 1
-  end
-end
 
 soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"]
 find_the_cheese(soup)
