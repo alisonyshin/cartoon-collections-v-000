@@ -14,14 +14,19 @@ end
 
 def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  cheese_types.each { |cheese| array.include?(cheese)}
+  cheese_types.each {|cheese| 
+    array.include?(cheese)}
 end
 
-#dwarf_names = ["Doc", "Dopey", "Bashful", "Grumpy"]
-#roll_call_dwarves(dwarf_names)
-# planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
-# puts summon_captain_planet(planeteer_calls)
-assorted_words = ["two", "go", "indu", "bop"]
-puts long_planeteer_calls(assorted_words)
+def my_find(collection)
+  i = 0
+  while i < collection.length
+    return collection[i] if yield(collection[i])
+    i = i + 1
+  end
+end
+
+collection = (1..100).to_a
+my_find(collection) {|i| i % 3 == 0 and i % 5 == 0 }
 
 
