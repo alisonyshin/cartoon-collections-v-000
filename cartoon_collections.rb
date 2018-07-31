@@ -22,6 +22,3 @@ def find_the_cheese(array)
 end
 
 
-soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"]
-puts find_the_cheese(soup)
-
